@@ -6,12 +6,24 @@
   <meta name="viewport" content="width=device-width">
   <title>WEBXR PROJECT</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-	
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 </head>
 
 <body>
   <a-scene>
-  
+    <a-plane id="floor" rotation="-90 0 0" color="blue" scale="22 11.5 10" position="0 -4 -12.5"></a-plane>
+    <a-plane id="leftWall" position="-11 1.5 -12.5" rotation="0 90 0" color="blue" scale="11.5 11 1"></a-plane>
+    <a-plane id="rightWall" position="11 1.5 -12.5" rotation="0 -90 0" color="blue" scale="11.5 11 1"></a-plane>
+    <a-plane id="rearLeft" position="7 1.5 -17" rotation="0 0 0" color="blue" scale="8 11 7"></a-plane>
+    <a-plane id="rearRight" position="-7 1.5 -17" rotation="0 0 0" color="blue" scale="8 11 7"></a-plane>
+    <a-plane id="frontLeft" position="7 1.5 -7" rotation="0 0 0" color="blue" scale="8 11 7"></a-plane>
+    <a-plane id="frontRight" position="-7 1.5 -7" rotation="0 0 0" color="blue" scale="8 11 7"></a-plane>
+
+    <a-plane id="floor" rotation="-90 0 0" color="blue" scale="22 11.5 10" position="0 -4 -22.5"></a-plane>
+    <a-plane id="secondleftWall" position="-11 1.5 -22.5" rotation="0 90 0" color="blue" scale="11.5 11 1"></a-plane>
+    <a-plane id="secondrightWall" position="11 1.5 -22.5" rotation="0 -90 0" color="blue" scale="11.5 11 1"></a-plane>
+    <a-plane id="secondrearLeft" position="7 1.5 -27" rotation="0 0 0" color="blue" scale="8 11 7"></a-plane>
+    <a-plane id="secondrearRight" position="-7 1.5 -27" rotation="0 0 0" color="blue" scale="8 11 7"></a-plane>
   </a-scene>
 </body>
 
