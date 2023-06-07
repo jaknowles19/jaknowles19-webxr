@@ -1,57 +1,42 @@
  <!DOCTYPE html>
-<html>
-
+<html lang = "en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
   <title>webxr</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-  <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
-
 </head>
 <body> 
   <a-scene>
-
-    <a-scene physics="gravity: -9.8;restitution: 0.1" inspector-plugin-recast></a-scene>
-    
-    <a-entity id="rig" position="0 0 0" movement-controls="constrainToNavMesh: true;speed:0.5;">
-      <a-entity camera id="camera" position="0 1.6 0" look-controls
-        extended-wasd-controls>
-      </a-entity>
-    </a-entity>
-
-    <!--added navmesh -->
     
     <a-plane id="floor" rotation="-90 0 0" color="green" scale="44 31.5 20" position="0 -4 -22.5"></a-plane>
     <a-plane id="roof" rotation="90 0 0" color="green" scale="44 31.5 20" position="0 11.5 -22.5"></a-plane>
     
     <!--made the floor green as to defer it from the other sections-->
     
-    <a-plane id="leftWall" position="-22 3.5 -22.5" rotation="0 90 0" color="blue" scale="31.7 16 1" nav-mesh></a-plane>
-    <a-plane id="rightWall" position="22 3.5 -22.5" rotation="0 -90 0" color="blue" scale="31.7 16 1" nav-mesh></a-plane>
-    <a-plane id="reverseleftWall" position="-22 3.5 -22.5" rotation="0 -90 0" color="blue" scale="31.7 16 1" nav-mesh></a-plane>
-    <a-plane id="reverserightWall" position="22 3.5 -22.5" rotation="0 90 0" color="blue" scale="31.7 16 1" nav-mesh></a-plane>
-    <a-plane id="backWall" position="0 3.5 -38" rotation="0 0 0" color="blue" scale="44 16 1" nav-mesh></a-plane>
-    <a-plane id="reversebackWall" position="0 3.5 -38" rotation="0 180 0" color="blue" scale="44 16 1" nav-mesh></a-plane>
-    <a-plane id="frontLeft" position="12.5 3.5 -6.8" rotation="0 0 0" color="blue" scale="19 16 7" nav-mesh></a-plane>
-    <a-plane id="frontRight" position="-12.5 3.5 -6.8" rotation="0 0 0" color="blue" scale="19 16 7" nav-mesh></a-plane>
-    <a-plane id="reversefrontLeft" position="12.5 3.5 -6.8" rotation="0 180 0" color="blue" scale="19 16 7" nav-mesh></a-plane>
-    <a-plane id="reversefrontRight" position="-12.5 3.5 -6.8" rotation="0 180 0" color="blue" scale="19 16 7" nav-mesh></a-plane>
+    <a-plane id="leftWall" position="-22 3.5 -22.5" rotation="0 90 0" color="blue" scale="31.7 16 1"></a-plane>
+    <a-plane id="rightWall" position="22 3.5 -22.5" rotation="0 -90 0" color="blue" scale="31.7 16 1"></a-plane>
+    <a-plane id="reverseleftWall" position="-22 3.5 -22.5" rotation="0 -90 0" color="blue" scale="31.7 16 1"></a-plane>
+    <a-plane id="reverserightWall" position="22 3.5 -22.5" rotation="0 90 0" color="blue" scale="31.7 16 1"></a-plane>
+    <a-plane id="backWall" position="0 3.5 -38" rotation="0 0 0" color="blue" scale="44 16 1"></a-plane>
+    <a-plane id="reversebackWall" position="0 3.5 -38" rotation="0 180 0" color="blue" scale="44 16 1"></a-plane>
+    <a-plane id="frontLeft" position="12.5 3.5 -6.8" rotation="0 0 0" color="blue" scale="19 16 7"></a-plane>
+    <a-plane id="frontRight" position="-12.5 3.5 -6.8" rotation="0 0 0" color="blue" scale="19 16 7"></a-plane>
+    <a-plane id="reversefrontLeft" position="12.5 3.5 -6.8" rotation="0 180 0" color="blue" scale="19 16 7"></a-plane>
+    <a-plane id="reversefrontRight" position="-12.5 3.5 -6.8" rotation="0 180 0" color="blue" scale="19 16 7"></a-plane>
 
     <!--changed color of walls to blue as to make them stand out more indicating that it will be the placeholder of the art6 for the galery-->
 
-    <a-plane id="entranceLeft" position="-3 3.5 -2.3" rotation="0 90 0" color="red" scale="9 16 8" nav-mesh></a-plane>
-    <a-plane id="entranceRight" position="3 3.5 -2.3" rotation="0 -90 0" color="red" scale="9 16 8" nav-mesh></a-plane>
-    <a-plane id="reverseentranceLeft" position="-3 3.5 -2.3" rotation="0 -90 0" color="red" scale="9 16 8" nav-mesh></a-plane>
-    <a-plane id="reverseentranceRight" position="3 3.5 -2.3" rotation="0 90 0" color="red" scale="9 16 8" nav-mesh></a-plane>
-    <a-plane id="entranceFloor" rotation="-90 0 0" color="red" scale="6 9 1" position="0 -4 -2.3" nav-mesh></a-plane>
-    <a-plane id="entranceRoof" rotation="90 0 0" color="red" scale="6 9 1" position="0 11.5 -2.3" nav-mesh></a-plane>
-    <a-plane id="entranceArch" rotation="0 0 0" color="red" scale="6 6.5 1" position="0 8.3 -6.8" nav-mesh></a-plane>
-    <a-plane id="reverseentranceArch" rotation="0 180 0" color="red" scale="6 6.5 1" position=" 0 8.3 -6.8" nav-mesh></a-plane>
-    <a-plane id="entranceBackwall" position="0 3.5 2.2" rotation="0 0 0" color="red" scale="6 16 8" nav-mesh></a-plane>
-    <a-plane id="reverseentranceBackwall" position="0 3.5 2.2" rotation="0 180 0" color="red" scale="6 16 8" nav-mesh></a-plane>
+    <a-plane id="entranceLeft" position="-3 3.5 -2.3" rotation="0 90 0" color="red" scale="9 16 8"></a-plane>
+    <a-plane id="entranceRight" position="3 3.5 -2.3" rotation="0 -90 0" color="red" scale="9 16 8"></a-plane>
+    <a-plane id="reverseentranceLeft" position="-3 3.5 -2.3" rotation="0 -90 0" color="red" scale="9 16 8"></a-plane>
+    <a-plane id="reverseentranceRight" position="3 3.5 -2.3" rotation="0 90 0" color="red" scale="9 16 8"></a-plane>
+    <a-plane id="entranceFloor" rotation="-90 0 0" color="red" scale="6 9 1" position="0 -4 -2.3"></a-plane>
+    <a-plane id="entranceRoof" rotation="90 0 0" color="red" scale="6 9 1" position="0 11.5 -2.3"></a-plane>
+    <a-plane id="entranceArch" rotation="0 0 0" color="red" scale="6 6.5 1" position="0 8.3 -6.8"></a-plane>
+    <a-plane id="reverseentranceArch" rotation="0 180 0" color="red" scale="6 6.5 1" position=" 0 8.3 -6.8"></a-plane>
+    <a-plane id="entranceBackwall" position="0 3.5 2.2" rotation="0 0 0" color="red" scale="6 16 8"></a-plane>
+    <a-plane id="reverseentranceBackwall" position="0 3.5 2.2" rotation="0 180 0" color="red" scale="6 16 8"></a-plane>
     
     <!--made the entrance red so it is different from the rest of the galery, also so that it will be shown here as the beginning stage -->
     
