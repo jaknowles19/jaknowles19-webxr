@@ -80,3 +80,25 @@ html {
   height: 250px;
   border: 2px solid #000;
 }
+
+.learn-head {
+  background-color: red;
+  height: 50px;
+  border: 1px solid #000;
+}
+
+.learn-head h1 {
+  font-size: 20px;
+}
+
+.learn-body {
+  background-color: green;
+  height: 600px;
+  border: 1px solid #000;
+}
+
+.learn-bottom {
+  background-color: purple;
+  height: 100px;
+  border: 1px sold #000;
+}
